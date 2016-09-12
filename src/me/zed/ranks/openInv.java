@@ -32,7 +32,7 @@ public class openInv implements Listener{
     }
 
     public void open(Player p, Inventory inventory){
-        Inventory inv = Bukkit.createInventory(p, 9*4, "Colors");
+        Inventory inv = Bukkit.createInventory(p, 9*6, "Colors");
 
         new BukkitRunnable(){
             int i = 0;

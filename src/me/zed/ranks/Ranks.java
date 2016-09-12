@@ -11,9 +11,17 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Ranks extends JavaPlugin implements Listener {
 
-    String mvp = ChatColor.AQUA + "[MVP" + ChatColor.RED + "+" + ChatColor.AQUA + "] ";
+    static List<String> activate = new ArrayList<>();
+    static List<String> selected = new ArrayList<>();
+    static List<String> karma50 = new ArrayList<>();
+    static List<String> karma100 = new ArrayList<>();
+
+    static String mvp = ChatColor.AQUA + "[MVP" + ChatColor.RED + "+" + ChatColor.AQUA + "] ";
 
     public static Plugin plugin;
 
@@ -22,6 +30,11 @@ public class Ranks extends JavaPlugin implements Listener {
         Bukkit.getServer().getPluginManager().registerEvents(this, this);
         Bukkit.getServer().getPluginManager().registerEvents(new openInv(this), this);
         Bukkit.getServer().getPluginManager().registerEvents(new chestClicks(this), this);
+
+        activate.add("§6§oClick to activate!");
+        selected.add("§2§oCurrently Selected!");
+        karma50.add("§5Karma Required: 50,000");
+        karma100.add("§5Karma Required: 100,000");
     }
 
     @EventHandler
