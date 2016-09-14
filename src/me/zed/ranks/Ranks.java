@@ -21,7 +21,7 @@ public class Ranks extends JavaPlugin implements Listener {
     static List<String> karma50 = new ArrayList<>();
     static List<String> karma100 = new ArrayList<>();
 
-    static String mvp = ChatColor.AQUA + "[MVP" + ChatColor.RED + "+" + ChatColor.AQUA + "] ";
+    static String mvp = "§b[MVP§4+§b] ";
 
     public static Plugin plugin;
 
